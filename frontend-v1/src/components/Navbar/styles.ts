@@ -26,7 +26,7 @@ export const LinkButton = styled.button`
   font-family: monospace;
 `;
 
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled.div`
   color: ${colors.BLACK};
   display: inline;
   transition: color 0.4s;
