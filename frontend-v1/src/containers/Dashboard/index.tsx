@@ -7,7 +7,7 @@ import {
 } from "./styles";
 import ItemCard from "@/components/ItemCard";
 import { Row, Col, Space } from "antd";
-import { TitleText } from "@/components/ItemCard/styles";
+import { TitleText } from "./styles";
 
 const { Option } = StyledSelect;
 
@@ -26,14 +26,17 @@ const Dashboard = () => {
         </Space>
       </StyledRow>
       <Row gutter={[24, 24]}>
-        <Col span={8}>
-          <ItemCard />
+        <Col span={6}>
+          <ItemCard title="Development Project 1" />
         </Col>
-        <Col span={8}>
-          <ItemCard />
+        <Col span={6}>
+          <ItemCard title="Development Project 2" />
         </Col>
-        <Col span={8}>
-          <ItemCard />
+        <Col span={6}>
+          <ItemCard title="Development Project 3" />
+        </Col>
+        <Col span={6}>
+          <ItemCard title="Development Project 4" />
         </Col>
       </Row>
     </DashboardContainer>

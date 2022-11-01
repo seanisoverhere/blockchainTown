@@ -3,13 +3,18 @@ import colors from "@/utils/constants/colors";
 import { Row, Select } from "antd";
 
 export const DashboardContainer = styled.div`
-  padding: 6rem 1.5rem;
+  padding: 0rem 1.5rem;
 `;
 
 export const StyledRow = styled(Row)`
   && {
     padding-bottom: 2rem;
   }
+`;
+
+export const TitleText = styled.div`
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 export const FilterText = styled.div`

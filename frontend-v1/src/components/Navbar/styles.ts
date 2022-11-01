@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "@/utils/constants/colors";
 
 export const StyledNav = styled.div`
-  position: fixed;
+  position: relative;
   z-index: 2;
   padding: 1.5rem;
   display: flex;
