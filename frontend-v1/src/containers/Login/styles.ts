@@ -6,6 +6,8 @@ export const Container = styled.div`
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  background: url("/frame.svg") 50% 50% no-repeat;
+  background-size: cover;
   background-color: ${colors.ORANGE_1};
 `;
 
