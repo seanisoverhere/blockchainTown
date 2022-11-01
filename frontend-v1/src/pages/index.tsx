@@ -1,10 +1,3 @@
-import Head from "next/head";
+import Dashboard from "@/containers/Dashboard";
 
-export default function Home() {
-  return (
-    <div>
-
-      <div>Hello world</div>
-    </div>
-  );
-}
+export default Dashboard;
