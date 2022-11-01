@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import { UseFormRegister, FieldValues, FieldErrorsImpl } from "react-hook-form";
 
-type FormInputProps = {
+type FormItemProps = {
   inputText: string;
   isRequired?: boolean;
   name: string;
@@ -17,13 +17,13 @@ type FormInputProps = {
   errors: Partial<FieldErrorsImpl<{ [x: string]: any }>>;
 };
 
-const FormInput = ({
+const FormItem = ({
   inputText,
   isRequired,
   name,
   register,
   errors,
-}: FormInputProps) => (
+}: FormItemProps) => (
   <>
     <TextField>
       <InputText>{inputText}</InputText>
@@ -31,7 +31,7 @@ const FormInput = ({
     </TextField>
     <StyledInput
       {...register(name, { required: isRequired })}
-      type="text"
+      type={name === "password" ? "password" : "text"}
       $hasError={!!errors[name]}
     />
     {errors[name] && (
@@ -43,4 +43,4 @@ const FormInput = ({
   </>
 );
 
-export default FormInput;
+export default FormItem;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import colors from "@/utils/constants/colors";
-import { Card } from "antd";
+import { Card, Space } from "antd";
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -12,7 +12,8 @@ export const Container = styled.div`
 export const LoginCard = styled(Card)`
   && {
     position: absolute;
-    min-width: 600px;
+    min-width: 500px;
+    min-height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,4 +28,20 @@ export const LoginTitle = styled.div`
   font-size: 1.25rem;
   font-weight: 600;
   padding-bottom: 1rem;
+`;
+
+export const StyledSpace = styled(Space)`
+  && {
+    width: 100%;
+    padding: 2rem 0;
+  }
+`;
+
+export const CTAText = styled.div`
+  font-weight: 400;
+`;
+
+export const SignUpText = styled.div`
+  font-size: 0.875rem;
+  padding-top: 1.5rem;
 `;

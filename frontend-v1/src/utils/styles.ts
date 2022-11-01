@@ -10,6 +10,6 @@ export const StyledButton = styled.button`
   font-size: 0.875rem;
   font-weight: 600;
   color: ${colors.BLACK};
-  background-color: ${colors.ORANGE_4};
+  background-color: ${colors.ORANGE_6};
   cursor: pointer;
 `;
