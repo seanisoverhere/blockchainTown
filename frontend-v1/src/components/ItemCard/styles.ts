@@ -9,6 +9,7 @@ export const StyledCard = styled(Card)`
 export const TitleText = styled.div`
   font-size: 1rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 `;
 
 export const ImgWrapper = styled.div`

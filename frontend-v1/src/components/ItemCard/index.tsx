@@ -1,5 +1,6 @@
 import React from "react";
 import { ImgWrapper, StyledCard, StyledImg, TitleText } from "./styles";
+import { Progress } from "antd";
 
 type ItemCardProps = {
   title: string;
@@ -20,6 +21,7 @@ const ItemCard = ({ title, image, description, cost, link }: ItemCardProps) => {
       }
     >
       <TitleText>{title}</TitleText>
+      <Progress percent={20} />
     </StyledCard>
   );
 };
