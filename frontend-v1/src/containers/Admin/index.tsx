@@ -7,6 +7,8 @@ import {
   ConnectText,
   DashboardContainer,
   DirectorName,
+  FlexContainer,
+  StyledButton,
   StyledImg,
   Title,
 } from "./styles";
@@ -18,6 +20,12 @@ const Admin = () => {
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
   }, []);
+
+  useEffect(() => {
+    if (hasSetDirector) {
+      getDirector();
+    }
+  }, [hasSetDirector]);
 
   const datastoreAddress = "0x0802CACD0Eff47d548F06a355b163cB33e2770C3";
   const proposalAddress = "0xe1f437C4dc88d38C2536579B1f52e34F72134cb3";
@@ -56,6 +64,7 @@ const Admin = () => {
     );
     try {
       const name = await contract.getDirector(localStorage.getItem("address"));
+      console.log(name);
       setDirectorName(name);
     } catch (error) {
       console.log(error);
@@ -85,10 +94,14 @@ const Admin = () => {
 
   return (
     <DashboardContainer>
-      <Title>Directors' Proposal Console</Title>
+      <FlexContainer>
+        <Title>Directors' Proposal Console</Title>
+        {hasSetDirector && <StyledButton>Add a proposal</StyledButton>}
+      </FlexContainer>
       {hasSetDirector ? (
-        (console.log(getDirector()),
-        (<DirectorName>Welcome, {directorName}</DirectorName>))
+        <>
+          <DirectorName>Welcome, {directorName}</DirectorName>
+        </>
       ) : (
         <ButtonContainer onClick={addDirector}>
           <ConnectText>Connect your Metamask:</ConnectText>

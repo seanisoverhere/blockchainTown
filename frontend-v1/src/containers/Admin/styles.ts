@@ -35,3 +35,27 @@ export const StyledImg = styled.img`
 export const DirectorName = styled.div`
   padding: 1rem 0;
 `;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyledButton = styled.button`
+  all: unset;
+  text-align: center;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #555;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  :hover {
+    background-color: #333;
+  }
+`;
