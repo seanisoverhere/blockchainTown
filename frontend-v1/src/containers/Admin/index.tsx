@@ -12,9 +12,11 @@ import {
   StyledImg,
   Title,
 } from "./styles";
+import ProposalModal from "@/components/ProposalModal";
 
 const Admin = () => {
   const [hasSetDirector, setHasSetDirector] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [directorName, setDirectorName] = useState<string>("");
 
   useEffect(() => {
@@ -94,9 +96,17 @@ const Admin = () => {
 
   return (
     <DashboardContainer>
+      <ProposalModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
       <FlexContainer>
         <Title>Directors' Proposal Console</Title>
-        {hasSetDirector && <StyledButton>Add a proposal</StyledButton>}
+        {hasSetDirector && (
+          <StyledButton onClick={() => setIsModalOpen(true)}>
+            Add a proposal
+          </StyledButton>
+        )}
       </FlexContainer>
       {hasSetDirector ? (
         <>
