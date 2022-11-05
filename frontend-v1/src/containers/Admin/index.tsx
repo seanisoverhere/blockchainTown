@@ -23,6 +23,7 @@ const Admin = () => {
 
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
+    // addVoter();
     seeProposals();
   }, []);
 
@@ -36,8 +37,8 @@ const Admin = () => {
     console.log(allProposalDetails);
   }, [allProposalDetails]);
 
-  const datastoreAddress = "0xE9bd1D2bF6f91F85d8824D3fcf0ed89bacBdbbE0";
-  const proposalAddress = "0x99a80868A62308E77eCa5FD5877a77A9C5612a0C";
+  const datastoreAddress = "0x48A8cA6C6da3a9e6F63bb04F1D1bd442715301E1";
+  const proposalAddress = "0xD19cCaE9193656539eCf45DE6D9e2C8b0f3a6c44";
   const metamaskAddress = "0xFD39D27e180DeE1E6f7FD851ED303C50f1ADFF35";
 
   const web3 = new Web3(typeof window !== "undefined" && window.ethereum);
@@ -63,6 +64,25 @@ const Admin = () => {
       );
       localStorage.setItem("address", metamaskAddress);
       setHasSetDirector(true);
+      await transaction.wait();
+    }
+  };
+
+  const addVoter = async () => {
+    if (typeof window.ethereum != "undefined") {
+      window.ethereum.enable(); // main wallet
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        datastoreAddress,
+        Datastore.abi,
+        signer
+      );
+      // contract.<method in solidty>
+      const transaction = await contract.addVoter(
+        "0xcb65A614A8c30410e6E6c72DCD6B845AeAB35df0",
+        "Keith voter"
+      );
       await transaction.wait();
     }
   };

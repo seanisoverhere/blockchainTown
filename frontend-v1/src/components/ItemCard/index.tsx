@@ -4,13 +4,19 @@ import { Progress } from "antd";
 
 type ItemCardProps = {
   title: string;
-  image: string;
-  description: string;
-  cost: string;
-  link: string;
+  budget: string;
+  voteYes: string;
+  voteNo: string;
+  votingEndTime: string;
 };
 
-const ItemCard = ({ title, image, description, cost, link }: ItemCardProps) => {
+const ItemCard = ({
+  title,
+  budget,
+  voteYes,
+  voteNo,
+  votingEndTime,
+}: ItemCardProps) => {
   return (
     <StyledCard
       bordered={false}

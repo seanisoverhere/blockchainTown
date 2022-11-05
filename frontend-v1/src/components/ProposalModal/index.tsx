@@ -1,8 +1,9 @@
-import React from "react";
-import { Modal, message } from "antd";
+import React, { useState } from "react";
+import { Modal, DatePicker, message } from "antd";
 import { useForm } from "react-hook-form";
 import FormItem from "../FormItem";
 import { HelperText, StyledCurrencyInput, StyledSpace } from "./styles";
+import moment from "moment";
 
 type ProposalModalProps = {
   isModalOpen: boolean;
@@ -15,6 +16,8 @@ const ProposalModal = ({
   setIsModalOpen,
   addProposal,
 }: ProposalModalProps) => {
+  const [date, setDate] = useState<number>();
+
   const {
     register,
     handleSubmit,
@@ -23,11 +26,11 @@ const ProposalModal = ({
   } = useForm({ mode: "all" });
   const onSubmit = async (data: any) => {
     setIsModalOpen(false);
-    const { proposalName, budget, votingEndDate } = data;
+    const { proposalName, budget } = data;
     await addProposal(
       proposalName,
       parseFloat(budget.slice(2).replace(/,/g, "")),
-      Number(votingEndDate)
+      Number(date)
     );
 
     message.success({
@@ -66,13 +69,10 @@ const ProposalModal = ({
               allowNegativeValue={false}
             />
           </div>
-          <FormItem
-            name="votingEndDate"
-            inputText="Voting End Date"
-            register={register}
-            errors={errors}
-            isRequired
-          />
+          <div>
+            <HelperText>Voting End Date</HelperText>
+            <DatePicker onChange={(e) => setDate(moment(e).valueOf())} />
+          </div>
         </StyledSpace>
       </form>
     </Modal>

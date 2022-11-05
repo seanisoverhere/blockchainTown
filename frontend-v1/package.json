@@ -13,6 +13,7 @@
     "@truffle/contract": "^4.6.6",
     "@types/styled-components": "^5.1.26",
     "antd": "^4.23.6",
+    "moment": "^2.29.4",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-currency-input-field": "^3.6.9",
