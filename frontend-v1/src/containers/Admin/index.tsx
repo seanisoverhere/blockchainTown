@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Web3 from "web3";
 import Datastore from "@/contracts/Datastore.json";
+import ProposalContract from "@/contracts/ProposalContract.json";
 import { ethers } from "ethers";
 import {
   ButtonContainer,
@@ -18,9 +19,11 @@ const Admin = () => {
   const [hasSetDirector, setHasSetDirector] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [directorName, setDirectorName] = useState<string>("");
+  const [allProposalDetails, setAllProposalDetails] = useState<any>([]);
 
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
+    seeProposals();
   }, []);
 
   useEffect(() => {
@@ -29,13 +32,21 @@ const Admin = () => {
     }
   }, [hasSetDirector]);
 
-  const datastoreAddress = "0x0802CACD0Eff47d548F06a355b163cB33e2770C3";
-  const proposalAddress = "0xe1f437C4dc88d38C2536579B1f52e34F72134cb3";
-  const metamaskAddress = "0x678B618a49C9F94E63E4B825b320c6BD5C4c7955";
+  useEffect(() => {
+    console.log(allProposalDetails);
+  }, [allProposalDetails]);
+
+  const datastoreAddress = "0xE9bd1D2bF6f91F85d8824D3fcf0ed89bacBdbbE0";
+  const proposalAddress = "0x99a80868A62308E77eCa5FD5877a77A9C5612a0C";
+  const metamaskAddress = "0xFD39D27e180DeE1E6f7FD851ED303C50f1ADFF35";
 
   const web3 = new Web3(typeof window !== "undefined" && window.ethereum);
 
-  async function addDirector() {
+  const requestAccount = async () => {
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+  };
+
+  const addDirector = async () => {
     if (typeof window.ethereum != "undefined") {
       window.ethereum.enable(); // main wallet
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -50,14 +61,13 @@ const Admin = () => {
         metamaskAddress,
         "Keith Long"
       );
-      console.log(transaction);
       localStorage.setItem("address", metamaskAddress);
       setHasSetDirector(true);
       await transaction.wait();
     }
-  }
+  };
 
-  async function getDirector() {
+  const getDirector = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract(
       datastoreAddress,
@@ -71,9 +81,52 @@ const Admin = () => {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
-  async function sendMoney() {
+  const addProposal = async (
+    proposalName: string,
+    budget: Number,
+    votingEndDate: Number
+  ) => {
+    if (typeof window.ethereum != "undefined") {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        proposalAddress,
+        ProposalContract.abi,
+        signer
+      );
+      const transaction = await contract.addProposal(
+        proposalName,
+        budget,
+        votingEndDate
+      );
+      await transaction.wait();
+    }
+  };
+
+  const seeProposals = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const contract = new ethers.Contract(
+      proposalAddress,
+      ProposalContract.abi,
+      provider
+    );
+    try {
+      let tempArray = [];
+      const data = await contract.getAllProposals();
+      for (const proposal of data) {
+        const proposalData = await contract.getProposalInfo(proposal);
+        tempArray.push(proposalData);
+      }
+      setAllProposalDetails(tempArray);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const sendMoney = async () => {
     if (typeof window.ethereum != "undefined") {
       const createTransaction = await web3.eth.accounts.signTransaction(
         {
@@ -92,13 +145,14 @@ const Admin = () => {
         console.log("not enough money");
       }
     }
-  }
+  };
 
   return (
     <DashboardContainer>
       <ProposalModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
+        addProposal={addProposal}
       />
       <FlexContainer>
         <Title>Directors' Proposal Console</Title>

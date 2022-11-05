@@ -7,18 +7,29 @@ import { HelperText, StyledCurrencyInput, StyledSpace } from "./styles";
 type ProposalModalProps = {
   isModalOpen: boolean;
   setIsModalOpen: (isModalOpen: boolean) => void;
+  addProposal: Function;
 };
 
-const ProposalModal = ({ isModalOpen, setIsModalOpen }: ProposalModalProps) => {
+const ProposalModal = ({
+  isModalOpen,
+  setIsModalOpen,
+  addProposal,
+}: ProposalModalProps) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm({ mode: "all" });
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
     setIsModalOpen(false);
+    const { proposalName, budget, votingEndDate } = data;
+    await addProposal(
+      proposalName,
+      parseFloat(budget.slice(2).replace(/,/g, "")),
+      Number(votingEndDate)
+    );
+
     message.success({
       content: "Proposal submitted successfully!",
       duration: 2,
@@ -48,15 +59,15 @@ const ProposalModal = ({ isModalOpen, setIsModalOpen }: ProposalModalProps) => {
           <div>
             <HelperText>Budget</HelperText>
             <StyledCurrencyInput
-              {...register("amount", { required: true })}
-              name="amount"
+              {...register("budget", { required: true })}
+              name="budget"
               prefix="S$"
               decimalsLimit={2}
               allowNegativeValue={false}
             />
           </div>
           <FormItem
-            name="duration"
+            name="votingEndDate"
             inputText="Voting End Date"
             register={register}
             errors={errors}
