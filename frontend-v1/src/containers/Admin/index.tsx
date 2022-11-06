@@ -141,7 +141,9 @@ const Admin = () => {
       const data = await contract.getAllProposals();
       for (const proposal of data) {
         const proposalData = await contract.getProposalInfo(proposal);
-        tempArray.push(proposalData);
+        tempArray.push({
+          [proposal]: proposalData,
+        });
       }
       setAllProposalDetails(tempArray);
     } catch (error) {
@@ -190,18 +192,24 @@ const Admin = () => {
           <DirectorName>Welcome, {directorName}</DirectorName>
           <CardContainer>
             <Row gutter={[24, 24]}>
-              {allProposalDetails.map((proposal: any) => (
-                <Col span={8}>
-                  <ItemCard
-                    key={proposal}
-                    title="test"
-                    budget={proposal.budget["_hex"]}
-                    voteYes={proposal.voteYes["_hex"]}
-                    voteNo={proposal.voteNo["_hex"]}
-                    votingEndTime={proposal.votingEndTime["_hex"]}
-                  />
-                </Col>
-              ))}
+              {allProposalDetails.map((proposal: any) => {
+                return Object.entries(proposal).map(
+                  ([key, value]: [string, any]) => {
+                    return (
+                      <Col span={8}>
+                        <ItemCard
+                          key={key}
+                          title={key}
+                          budget={value.budget["_hex"]}
+                          voteYes={value.voteYes["_hex"]}
+                          voteNo={value.voteNo["_hex"]}
+                          votingEndTime={value.votingEndTime["_hex"]}
+                        />
+                      </Col>
+                    );
+                  }
+                );
+              })}
             </Row>
           </CardContainer>
         </>

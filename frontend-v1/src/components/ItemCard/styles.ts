@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import colors from "@/utils/constants/colors";
 import { Card } from "antd";
 
 export const StyledCard = styled(Card)`
