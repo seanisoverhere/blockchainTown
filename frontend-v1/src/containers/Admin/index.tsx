@@ -5,6 +5,7 @@ import ProposalContract from "@/contracts/ProposalContract.json";
 import { ethers } from "ethers";
 import {
   ButtonContainer,
+  CardContainer,
   ConnectText,
   DashboardContainer,
   DirectorName,
@@ -14,6 +15,8 @@ import {
   Title,
 } from "./styles";
 import ProposalModal from "@/components/ProposalModal";
+import ItemCard from "@/components/ItemCard";
+import { Row, Col } from "antd";
 
 const Admin = () => {
   const [hasSetDirector, setHasSetDirector] = useState<boolean>(false);
@@ -185,6 +188,22 @@ const Admin = () => {
       {hasSetDirector ? (
         <>
           <DirectorName>Welcome, {directorName}</DirectorName>
+          <CardContainer>
+            <Row gutter={[24, 24]}>
+              {allProposalDetails.map((proposal: any) => (
+                <Col span={8}>
+                  <ItemCard
+                    key={proposal}
+                    title="test"
+                    budget={proposal.budget["_hex"]}
+                    voteYes={proposal.voteYes["_hex"]}
+                    voteNo={proposal.voteNo["_hex"]}
+                    votingEndTime={proposal.votingEndTime["_hex"]}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </CardContainer>
         </>
       ) : (
         <ButtonContainer onClick={addDirector}>

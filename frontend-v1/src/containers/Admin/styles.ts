@@ -59,3 +59,7 @@ export const StyledButton = styled.button`
     background-color: #333;
   }
 `;
+
+export const CardContainer = styled.div`
+  margin: 1rem 0;
+`;

@@ -1,6 +1,6 @@
 import React from "react";
 import { ImgWrapper, StyledCard, StyledImg, TitleText } from "./styles";
-import { Progress } from "antd";
+import moment from "moment";
 
 type ItemCardProps = {
   title: string;
@@ -27,7 +27,12 @@ const ItemCard = ({
       }
     >
       <TitleText>{title}</TitleText>
-      <Progress percent={20} />
+      <TitleText>${parseInt(budget).toLocaleString()}</TitleText>
+      <TitleText>{parseInt(voteYes)} Yes</TitleText>
+      <TitleText>{parseInt(voteNo)} No</TitleText>
+      <TitleText>
+        {moment.unix(parseInt(votingEndTime)).format("MMMM Do")}
+      </TitleText>
     </StyledCard>
   );
 };
