@@ -26,7 +26,6 @@ const Admin = () => {
 
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
-    // addVoter();
     seeProposals();
   }, []);
 
@@ -40,8 +39,8 @@ const Admin = () => {
     console.log(allProposalDetails);
   }, [allProposalDetails]);
 
-  const datastoreAddress = "0x48A8cA6C6da3a9e6F63bb04F1D1bd442715301E1";
-  const proposalAddress = "0xD19cCaE9193656539eCf45DE6D9e2C8b0f3a6c44";
+  const datastoreAddress = "0x45e81400E70e7b78834120230fD44972c8A41334";
+  const proposalAddress = "0xe8b00d59B0E371d3d1b71D1306FACbA45862784b";
   const metamaskAddress = "0xFD39D27e180DeE1E6f7FD851ED303C50f1ADFF35";
 
   const web3 = new Web3(typeof window !== "undefined" && window.ethereum);

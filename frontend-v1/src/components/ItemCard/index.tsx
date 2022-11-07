@@ -43,8 +43,8 @@ const ItemCard = ({
     { option: "No", votes: parseInt(voteNo) },
   ];
 
-  const datastoreAddress = "0x48A8cA6C6da3a9e6F63bb04F1D1bd442715301E1";
-  const proposalAddress = "0x99a80868A62308E77eCa5FD5877a77A9C5612a0C";
+  const datastoreAddress = "0x45e81400E70e7b78834120230fD44972c8A41334";
+  const proposalAddress = "0xe8b00d59B0E371d3d1b71D1306FACbA45862784b";
   const metamaskAddress = "0xcb65A614A8c30410e6E6c72DCD6B845AeAB35df0";
 
   const requestAccount = async () => {
@@ -80,13 +80,13 @@ const ItemCard = ({
         ProposalContract.abi,
         signer
       );
-      const transaction = await contract.voteProposal(title, answer === "True");
+      const transaction = await contract.voteProposal(title, answer === "Yes");
       await transaction.wait();
     }
   };
 
   const handleVote = async (voteAnswers: any) => {
-    await addVoter();
+    // await addVoter();
     voteProposal(title, voteAnswers);
   };
 
