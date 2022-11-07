@@ -1700,6 +1700,11 @@ ajv@^8.0.0, ajv@^8.6.3:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+animate.css@^3.7.0:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
+  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
+
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
@@ -6665,6 +6670,13 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-polls@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-polls/-/react-polls-1.2.0.tgz#4d2e9802efe7e83ee8b37ae3d1368f7bf7869675"
+  integrity sha512-qkPgkEGXJzCk8S5os47sS2iv6vjzEzYbPm9Als6kEdhXBHDJmkOXNNiXsjjyNI1xZDul8+RXY0C9hOtjkuZjDA==
+  dependencies:
+    animate.css "^3.7.0"
 
 react@18.2.0:
   version "18.2.0"

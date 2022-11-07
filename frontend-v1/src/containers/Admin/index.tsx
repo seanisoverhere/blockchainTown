@@ -71,25 +71,6 @@ const Admin = () => {
     }
   };
 
-  const addVoter = async () => {
-    if (typeof window.ethereum != "undefined") {
-      window.ethereum.enable(); // main wallet
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        datastoreAddress,
-        Datastore.abi,
-        signer
-      );
-      // contract.<method in solidty>
-      const transaction = await contract.addVoter(
-        "0xcb65A614A8c30410e6E6c72DCD6B845AeAB35df0",
-        "Keith voter"
-      );
-      await transaction.wait();
-    }
-  };
-
   const getDirector = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract(
@@ -191,10 +172,11 @@ const Admin = () => {
         <>
           <DirectorName>Welcome, {directorName}</DirectorName>
           <CardContainer>
-            <Row gutter={[24, 24]}>
+            <Row gutter={[24, 24]} style={{ paddingBottom: "3rem" }}>
               {allProposalDetails.map((proposal: any) => {
                 return Object.entries(proposal).map(
                   ([key, value]: [string, any]) => {
+                    console.log(value)
                     return (
                       <Col span={8}>
                         <ItemCard
