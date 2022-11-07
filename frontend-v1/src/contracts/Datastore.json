@@ -7895,14 +7895,14 @@
     "absolutePath": "project:/contracts/datastore.sol",
     "exportedSymbols": {
       "Datastore": [
-        1139
+        1152
       ]
     },
-    "id": 1140,
+    "id": 1153,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 931,
+        "id": 944,
         "literals": [
           "solidity",
           "^",
@@ -7919,9 +7919,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1139,
+        "id": 1152,
         "linearizedBaseContracts": [
-          1139
+          1152
         ],
         "name": "Datastore",
         "nameLocation": "34:9:3",
@@ -7929,16 +7929,16 @@
         "nodes": [
           {
             "canonicalName": "Datastore.voter",
-            "id": 938,
+            "id": 951,
             "members": [
               {
                 "constant": false,
-                "id": 933,
+                "id": 946,
                 "mutability": "mutable",
                 "name": "name",
                 "nameLocation": "119:4:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 938,
+                "scope": 951,
                 "src": "112:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7947,7 +7947,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 932,
+                  "id": 945,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "112:6:3",
@@ -7960,12 +7960,12 @@
               },
               {
                 "constant": false,
-                "id": 937,
+                "id": 950,
                 "mutability": "mutable",
                 "name": "proposals",
                 "nameLocation": "159:9:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 938,
+                "scope": 951,
                 "src": "133:35:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7974,9 +7974,9 @@
                   "typeString": "mapping(string => string)"
                 },
                 "typeName": {
-                  "id": 936,
+                  "id": 949,
                   "keyType": {
-                    "id": 934,
+                    "id": 947,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:6:3",
@@ -7992,7 +7992,7 @@
                     "typeString": "mapping(string => string)"
                   },
                   "valueType": {
-                    "id": 935,
+                    "id": 948,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "151:6:3",
@@ -8008,22 +8008,22 @@
             "name": "voter",
             "nameLocation": "96:5:3",
             "nodeType": "StructDefinition",
-            "scope": 1139,
+            "scope": 1152,
             "src": "89:86:3",
             "visibility": "public"
           },
           {
             "canonicalName": "Datastore.director",
-            "id": 945,
+            "id": 958,
             "members": [
               {
                 "constant": false,
-                "id": 940,
+                "id": 953,
                 "mutability": "mutable",
                 "name": "name",
                 "nameLocation": "214:4:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 945,
+                "scope": 958,
                 "src": "207:11:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -8032,7 +8032,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 939,
+                  "id": 952,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "207:6:3",
@@ -8045,12 +8045,12 @@
               },
               {
                 "constant": false,
-                "id": 944,
+                "id": 957,
                 "mutability": "mutable",
                 "name": "proposals",
                 "nameLocation": "252:9:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 945,
+                "scope": 958,
                 "src": "228:33:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -8059,9 +8059,9 @@
                   "typeString": "mapping(string => bool)"
                 },
                 "typeName": {
-                  "id": 943,
+                  "id": 956,
                   "keyType": {
-                    "id": 941,
+                    "id": 954,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "236:6:3",
@@ -8077,7 +8077,7 @@
                     "typeString": "mapping(string => bool)"
                   },
                   "valueType": {
-                    "id": 942,
+                    "id": 955,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "246:4:3",
@@ -8093,29 +8093,29 @@
             "name": "director",
             "nameLocation": "188:8:3",
             "nodeType": "StructDefinition",
-            "scope": 1139,
+            "scope": 1152,
             "src": "181:87:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 950,
+            "id": 963,
             "mutability": "mutable",
             "name": "voters",
             "nameLocation": "409:6:3",
             "nodeType": "VariableDeclaration",
-            "scope": 1139,
+            "scope": 1152,
             "src": "375:40:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
               "typeString": "mapping(address => struct Datastore.voter)"
             },
             "typeName": {
-              "id": 949,
+              "id": 962,
               "keyType": {
-                "id": 946,
+                "id": 959,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "383:7:3",
@@ -8127,26 +8127,26 @@
               "nodeType": "Mapping",
               "src": "375:25:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
                 "typeString": "mapping(address => struct Datastore.voter)"
               },
               "valueType": {
-                "id": 948,
+                "id": 961,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 947,
+                  "id": 960,
                   "name": "voter",
                   "nameLocations": [
                     "394:5:3"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 938,
+                  "referencedDeclaration": 951,
                   "src": "394:5:3"
                 },
-                "referencedDeclaration": 938,
+                "referencedDeclaration": 951,
                 "src": "394:5:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_voter_$938_storage_ptr",
+                  "typeIdentifier": "t_struct$_voter_$951_storage_ptr",
                   "typeString": "struct Datastore.voter"
                 }
               }
@@ -8155,23 +8155,23 @@
           },
           {
             "constant": false,
-            "id": 955,
+            "id": 968,
             "mutability": "mutable",
             "name": "directors",
             "nameLocation": "458:9:3",
             "nodeType": "VariableDeclaration",
-            "scope": 1139,
+            "scope": 1152,
             "src": "421:46:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
               "typeString": "mapping(address => struct Datastore.director)"
             },
             "typeName": {
-              "id": 954,
+              "id": 967,
               "keyType": {
-                "id": 951,
+                "id": 964,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "429:7:3",
@@ -8183,26 +8183,26 @@
               "nodeType": "Mapping",
               "src": "421:28:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
                 "typeString": "mapping(address => struct Datastore.director)"
               },
               "valueType": {
-                "id": 953,
+                "id": 966,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 952,
+                  "id": 965,
                   "name": "director",
                   "nameLocations": [
                     "440:8:3"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 945,
+                  "referencedDeclaration": 958,
                   "src": "440:8:3"
                 },
-                "referencedDeclaration": 945,
+                "referencedDeclaration": 958,
                 "src": "440:8:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_director_$945_storage_ptr",
+                  "typeIdentifier": "t_struct$_director_$958_storage_ptr",
                   "typeString": "struct Datastore.director"
                 }
               }
@@ -8211,12 +8211,12 @@
           },
           {
             "constant": false,
-            "id": 958,
+            "id": 971,
             "mutability": "mutable",
             "name": "votersName",
             "nameLocation": "564:10:3",
             "nodeType": "VariableDeclaration",
-            "scope": 1139,
+            "scope": 1152,
             "src": "555:19:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -8226,7 +8226,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 956,
+                "id": 969,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "555:6:3",
@@ -8235,7 +8235,7 @@
                   "typeString": "string"
                 }
               },
-              "id": 957,
+              "id": 970,
               "nodeType": "ArrayTypeName",
               "src": "555:8:3",
               "typeDescriptions": {
@@ -8247,12 +8247,12 @@
           },
           {
             "constant": false,
-            "id": 961,
+            "id": 974,
             "mutability": "mutable",
             "name": "directorsName",
             "nameLocation": "589:13:3",
             "nodeType": "VariableDeclaration",
-            "scope": 1139,
+            "scope": 1152,
             "src": "580:22:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -8262,7 +8262,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 959,
+                "id": 972,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "580:6:3",
@@ -8271,7 +8271,7 @@
                   "typeString": "string"
                 }
               },
-              "id": 960,
+              "id": 973,
               "nodeType": "ArrayTypeName",
               "src": "580:8:3",
               "typeDescriptions": {
@@ -8283,7 +8283,7 @@
           },
           {
             "body": {
-              "id": 973,
+              "id": 986,
               "nodeType": "Block",
               "src": "677:41:3",
               "statements": [
@@ -8291,24 +8291,24 @@
                   "expression": {
                     "expression": {
                       "baseExpression": {
-                        "id": 968,
+                        "id": 981,
                         "name": "voters",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 950,
+                        "referencedDeclaration": 963,
                         "src": "694:6:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
                           "typeString": "mapping(address => struct Datastore.voter storage ref)"
                         }
                       },
-                      "id": 970,
+                      "id": 983,
                       "indexExpression": {
-                        "id": 969,
+                        "id": 982,
                         "name": "addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 963,
+                        "referencedDeclaration": 976,
                         "src": "701:4:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8322,11 +8322,11 @@
                       "nodeType": "IndexAccess",
                       "src": "694:12:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_voter_$938_storage",
+                        "typeIdentifier": "t_struct$_voter_$951_storage",
                         "typeString": "struct Datastore.voter storage ref"
                       }
                     },
-                    "id": 971,
+                    "id": 984,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -8334,22 +8334,22 @@
                     "memberLocation": "707:4:3",
                     "memberName": "name",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 933,
+                    "referencedDeclaration": 946,
                     "src": "694:17:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 967,
-                  "id": 972,
+                  "functionReturnParameters": 980,
+                  "id": 985,
                   "nodeType": "Return",
                   "src": "687:24:3"
                 }
               ]
             },
             "functionSelector": "d4f50f98",
-            "id": 974,
+            "id": 987,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -8357,17 +8357,17 @@
             "nameLocation": "618:8:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 964,
+              "id": 977,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 963,
+                  "id": 976,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "635:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 974,
+                  "scope": 987,
                   "src": "627:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -8376,7 +8376,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 962,
+                    "id": 975,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "627:7:3",
@@ -8392,17 +8392,17 @@
               "src": "626:14:3"
             },
             "returnParameters": {
-              "id": 967,
+              "id": 980,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 966,
+                  "id": 979,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 974,
+                  "scope": 987,
                   "src": "662:13:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8411,7 +8411,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 965,
+                    "id": 978,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "662:6:3",
@@ -8425,7 +8425,7 @@
               ],
               "src": "661:15:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "609:109:3",
             "stateMutability": "view",
             "virtual": false,
@@ -8433,32 +8433,32 @@
           },
           {
             "body": {
-              "id": 982,
+              "id": 995,
               "nodeType": "Block",
               "src": "783:34:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 980,
+                    "id": 993,
                     "name": "votersName",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 958,
+                    "referencedDeclaration": 971,
                     "src": "800:10:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
                       "typeString": "string storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 979,
-                  "id": 981,
+                  "functionReturnParameters": 992,
+                  "id": 994,
                   "nodeType": "Return",
                   "src": "793:17:3"
                 }
               ]
             },
             "functionSelector": "cdd72253",
-            "id": 983,
+            "id": 996,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -8466,23 +8466,23 @@
             "nameLocation": "733:9:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 975,
+              "id": 988,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "742:2:3"
             },
             "returnParameters": {
-              "id": 979,
+              "id": 992,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 978,
+                  "id": 991,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 983,
+                  "scope": 996,
                   "src": "766:15:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8492,7 +8492,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 976,
+                      "id": 989,
                       "name": "string",
                       "nodeType": "ElementaryTypeName",
                       "src": "766:6:3",
@@ -8501,7 +8501,7 @@
                         "typeString": "string"
                       }
                     },
-                    "id": 977,
+                    "id": 990,
                     "nodeType": "ArrayTypeName",
                     "src": "766:8:3",
                     "typeDescriptions": {
@@ -8514,7 +8514,7 @@
               ],
               "src": "765:17:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "724:93:3",
             "stateMutability": "view",
             "virtual": false,
@@ -8522,25 +8522,25 @@
           },
           {
             "body": {
-              "id": 991,
+              "id": 1004,
               "nodeType": "Block",
               "src": "876:41:3",
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 988,
+                      "id": 1001,
                       "name": "votersName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 958,
+                      "referencedDeclaration": 971,
                       "src": "893:10:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
                         "typeString": "string storage ref[] storage ref"
                       }
                     },
-                    "id": 989,
+                    "id": 1002,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8554,15 +8554,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 987,
-                  "id": 990,
+                  "functionReturnParameters": 1000,
+                  "id": 1003,
                   "nodeType": "Return",
                   "src": "886:24:3"
                 }
               ]
             },
             "functionSelector": "c0f2a777",
-            "id": 992,
+            "id": 1005,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -8570,23 +8570,23 @@
             "nameLocation": "832:14:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 984,
+              "id": 997,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "846:2:3"
             },
             "returnParameters": {
-              "id": 987,
+              "id": 1000,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 986,
+                  "id": 999,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 992,
+                  "scope": 1005,
                   "src": "870:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -8595,7 +8595,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 985,
+                    "id": 998,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "870:4:3",
@@ -8609,7 +8609,7 @@
               ],
               "src": "869:6:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "823:94:3",
             "stateMutability": "view",
             "virtual": false,
@@ -8617,74 +8617,74 @@
           },
           {
             "body": {
-              "id": 1018,
+              "id": 1031,
               "nodeType": "Block",
               "src": "984:119:3",
               "statements": [
                 {
                   "assignments": [
-                    1001
+                    1014
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1001,
+                      "id": 1014,
                       "mutability": "mutable",
                       "name": "addedVoter",
                       "nameLocation": "1008:10:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1018,
+                      "scope": 1031,
                       "src": "994:24:3",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_voter_$938_storage_ptr",
+                        "typeIdentifier": "t_struct$_voter_$951_storage_ptr",
                         "typeString": "struct Datastore.voter"
                       },
                       "typeName": {
-                        "id": 1000,
+                        "id": 1013,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 999,
+                          "id": 1012,
                           "name": "voter",
                           "nameLocations": [
                             "994:5:3"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 938,
+                          "referencedDeclaration": 951,
                           "src": "994:5:3"
                         },
-                        "referencedDeclaration": 938,
+                        "referencedDeclaration": 951,
                         "src": "994:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_voter_$938_storage_ptr",
+                          "typeIdentifier": "t_struct$_voter_$951_storage_ptr",
                           "typeString": "struct Datastore.voter"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1005,
+                  "id": 1018,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 1002,
+                      "id": 1015,
                       "name": "voters",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 950,
+                      "referencedDeclaration": 963,
                       "src": "1021:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
                         "typeString": "mapping(address => struct Datastore.voter storage ref)"
                       }
                     },
-                    "id": 1004,
+                    "id": 1017,
                     "indexExpression": {
-                      "id": 1003,
+                      "id": 1016,
                       "name": "addr",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 994,
+                      "referencedDeclaration": 1007,
                       "src": "1028:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -8698,7 +8698,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1021:12:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_voter_$938_storage",
+                      "typeIdentifier": "t_struct$_voter_$951_storage",
                       "typeString": "struct Datastore.voter storage ref"
                     }
                   },
@@ -8707,25 +8707,25 @@
                 },
                 {
                   "expression": {
-                    "id": 1010,
+                    "id": 1023,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 1006,
+                        "id": 1019,
                         "name": "addedVoter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1001,
+                        "referencedDeclaration": 1014,
                         "src": "1043:10:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_voter_$938_storage_ptr",
+                          "typeIdentifier": "t_struct$_voter_$951_storage_ptr",
                           "typeString": "struct Datastore.voter storage pointer"
                         }
                       },
-                      "id": 1008,
+                      "id": 1021,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -8733,7 +8733,7 @@
                       "memberLocation": "1054:4:3",
                       "memberName": "name",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 933,
+                      "referencedDeclaration": 946,
                       "src": "1043:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -8743,11 +8743,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1009,
+                      "id": 1022,
                       "name": "name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 996,
+                      "referencedDeclaration": 1009,
                       "src": "1061:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -8760,7 +8760,7 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1011,
+                  "id": 1024,
                   "nodeType": "ExpressionStatement",
                   "src": "1043:22:3"
                 },
@@ -8768,11 +8768,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1015,
+                        "id": 1028,
                         "name": "name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 996,
+                        "referencedDeclaration": 1009,
                         "src": "1091:4:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_calldata_ptr",
@@ -8788,18 +8788,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 1012,
+                        "id": 1025,
                         "name": "votersName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 958,
+                        "referencedDeclaration": 971,
                         "src": "1075:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
                           "typeString": "string storage ref[] storage ref"
                         }
                       },
-                      "id": 1014,
+                      "id": 1027,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8813,7 +8813,7 @@
                         "typeString": "function (string storage ref[] storage pointer,string storage ref)"
                       }
                     },
-                    "id": 1016,
+                    "id": 1029,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8829,14 +8829,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1017,
+                  "id": 1030,
                   "nodeType": "ExpressionStatement",
                   "src": "1075:21:3"
                 }
               ]
             },
             "functionSelector": "d9e95a98",
-            "id": 1019,
+            "id": 1032,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -8844,17 +8844,17 @@
             "nameLocation": "932:8:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 997,
+              "id": 1010,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 994,
+                  "id": 1007,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "949:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1019,
+                  "scope": 1032,
                   "src": "941:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -8863,7 +8863,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 993,
+                    "id": 1006,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "941:7:3",
@@ -8877,12 +8877,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 996,
+                  "id": 1009,
                   "mutability": "mutable",
                   "name": "name",
                   "nameLocation": "971:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1019,
+                  "scope": 1032,
                   "src": "955:20:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -8891,7 +8891,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 995,
+                    "id": 1008,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "955:6:3",
@@ -8906,12 +8906,12 @@
               "src": "940:36:3"
             },
             "returnParameters": {
-              "id": 998,
+              "id": 1011,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "984:0:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "923:180:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -8919,7 +8919,7 @@
           },
           {
             "body": {
-              "id": 1035,
+              "id": 1048,
               "nodeType": "Block",
               "src": "1215:60:3",
               "statements": [
@@ -8928,24 +8928,24 @@
                     "baseExpression": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1028,
+                          "id": 1041,
                           "name": "voters",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 950,
+                          "referencedDeclaration": 963,
                           "src": "1232:6:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
                             "typeString": "mapping(address => struct Datastore.voter storage ref)"
                           }
                         },
-                        "id": 1030,
+                        "id": 1043,
                         "indexExpression": {
-                          "id": 1029,
+                          "id": 1042,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1021,
+                          "referencedDeclaration": 1034,
                           "src": "1239:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -8959,11 +8959,11 @@
                         "nodeType": "IndexAccess",
                         "src": "1232:12:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_voter_$938_storage",
+                          "typeIdentifier": "t_struct$_voter_$951_storage",
                           "typeString": "struct Datastore.voter storage ref"
                         }
                       },
-                      "id": 1031,
+                      "id": 1044,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -8971,20 +8971,20 @@
                       "memberLocation": "1245:9:3",
                       "memberName": "proposals",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 937,
+                      "referencedDeclaration": 950,
                       "src": "1232:22:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
                         "typeString": "mapping(string memory => string storage ref)"
                       }
                     },
-                    "id": 1033,
+                    "id": 1046,
                     "indexExpression": {
-                      "id": 1032,
+                      "id": 1045,
                       "name": "proposalName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1023,
+                      "referencedDeclaration": 1036,
                       "src": "1255:12:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -9002,15 +9002,15 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 1027,
-                  "id": 1034,
+                  "functionReturnParameters": 1040,
+                  "id": 1047,
                   "nodeType": "Return",
                   "src": "1225:43:3"
                 }
               ]
             },
             "functionSelector": "e8ae7a0a",
-            "id": 1036,
+            "id": 1049,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9018,17 +9018,17 @@
             "nameLocation": "1118:16:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1024,
+              "id": 1037,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1021,
+                  "id": 1034,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "1143:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1036,
+                  "scope": 1049,
                   "src": "1135:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9037,7 +9037,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1020,
+                    "id": 1033,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1135:7:3",
@@ -9051,12 +9051,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1023,
+                  "id": 1036,
                   "mutability": "mutable",
                   "name": "proposalName",
                   "nameLocation": "1165:12:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1036,
+                  "scope": 1049,
                   "src": "1149:28:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -9065,7 +9065,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1022,
+                    "id": 1035,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1149:6:3",
@@ -9080,17 +9080,17 @@
               "src": "1134:44:3"
             },
             "returnParameters": {
-              "id": 1027,
+              "id": 1040,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1026,
+                  "id": 1039,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1036,
+                  "scope": 1049,
                   "src": "1200:13:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9099,7 +9099,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1025,
+                    "id": 1038,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1200:6:3",
@@ -9113,7 +9113,7 @@
               ],
               "src": "1199:15:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1109:166:3",
             "stateMutability": "view",
             "virtual": false,
@@ -9121,13 +9121,13 @@
           },
           {
             "body": {
-              "id": 1054,
+              "id": 1067,
               "nodeType": "Block",
               "src": "1380:60:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 1052,
+                    "id": 1065,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9136,24 +9136,24 @@
                       "baseExpression": {
                         "expression": {
                           "baseExpression": {
-                            "id": 1045,
+                            "id": 1058,
                             "name": "voters",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 950,
+                            "referencedDeclaration": 963,
                             "src": "1390:6:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$938_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_voter_$951_storage_$",
                               "typeString": "mapping(address => struct Datastore.voter storage ref)"
                             }
                           },
-                          "id": 1047,
+                          "id": 1060,
                           "indexExpression": {
-                            "id": 1046,
+                            "id": 1059,
                             "name": "addr",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1038,
+                            "referencedDeclaration": 1051,
                             "src": "1397:4:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -9167,11 +9167,11 @@
                           "nodeType": "IndexAccess",
                           "src": "1390:12:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_voter_$938_storage",
+                            "typeIdentifier": "t_struct$_voter_$951_storage",
                             "typeString": "struct Datastore.voter storage ref"
                           }
                         },
-                        "id": 1048,
+                        "id": 1061,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
@@ -9179,20 +9179,20 @@
                         "memberLocation": "1403:9:3",
                         "memberName": "proposals",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 937,
+                        "referencedDeclaration": 950,
                         "src": "1390:22:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
                           "typeString": "mapping(string memory => string storage ref)"
                         }
                       },
-                      "id": 1050,
+                      "id": 1063,
                       "indexExpression": {
-                        "id": 1049,
+                        "id": 1062,
                         "name": "proposalName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1040,
+                        "referencedDeclaration": 1053,
                         "src": "1413:12:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_calldata_ptr",
@@ -9213,11 +9213,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1051,
+                      "id": 1064,
                       "name": "vote",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1042,
+                      "referencedDeclaration": 1055,
                       "src": "1429:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -9230,14 +9230,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1053,
+                  "id": 1066,
                   "nodeType": "ExpressionStatement",
                   "src": "1390:43:3"
                 }
               ]
             },
             "functionSelector": "1fae0f6e",
-            "id": 1055,
+            "id": 1068,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9245,17 +9245,17 @@
             "nameLocation": "1290:16:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1043,
+              "id": 1056,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1038,
+                  "id": 1051,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "1315:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1055,
+                  "scope": 1068,
                   "src": "1307:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9264,7 +9264,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1037,
+                    "id": 1050,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1307:7:3",
@@ -9278,12 +9278,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1040,
+                  "id": 1053,
                   "mutability": "mutable",
                   "name": "proposalName",
                   "nameLocation": "1337:12:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1055,
+                  "scope": 1068,
                   "src": "1321:28:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -9292,7 +9292,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1039,
+                    "id": 1052,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1321:6:3",
@@ -9305,12 +9305,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1042,
+                  "id": 1055,
                   "mutability": "mutable",
                   "name": "vote",
                   "nameLocation": "1367:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1055,
+                  "scope": 1068,
                   "src": "1351:20:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -9319,7 +9319,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1041,
+                    "id": 1054,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1351:6:3",
@@ -9334,12 +9334,12 @@
               "src": "1306:66:3"
             },
             "returnParameters": {
-              "id": 1044,
+              "id": 1057,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1380:0:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1281:159:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -9347,7 +9347,7 @@
           },
           {
             "body": {
-              "id": 1067,
+              "id": 1080,
               "nodeType": "Block",
               "src": "1517:44:3",
               "statements": [
@@ -9355,24 +9355,24 @@
                   "expression": {
                     "expression": {
                       "baseExpression": {
-                        "id": 1062,
+                        "id": 1075,
                         "name": "directors",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 955,
+                        "referencedDeclaration": 968,
                         "src": "1534:9:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
                           "typeString": "mapping(address => struct Datastore.director storage ref)"
                         }
                       },
-                      "id": 1064,
+                      "id": 1077,
                       "indexExpression": {
-                        "id": 1063,
+                        "id": 1076,
                         "name": "addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1057,
+                        "referencedDeclaration": 1070,
                         "src": "1544:4:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -9386,11 +9386,11 @@
                       "nodeType": "IndexAccess",
                       "src": "1534:15:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_director_$945_storage",
+                        "typeIdentifier": "t_struct$_director_$958_storage",
                         "typeString": "struct Datastore.director storage ref"
                       }
                     },
-                    "id": 1065,
+                    "id": 1078,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -9398,22 +9398,22 @@
                     "memberLocation": "1550:4:3",
                     "memberName": "name",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 940,
+                    "referencedDeclaration": 953,
                     "src": "1534:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 1061,
-                  "id": 1066,
+                  "functionReturnParameters": 1074,
+                  "id": 1079,
                   "nodeType": "Return",
                   "src": "1527:27:3"
                 }
               ]
             },
             "functionSelector": "04ab80fc",
-            "id": 1068,
+            "id": 1081,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9421,17 +9421,17 @@
             "nameLocation": "1455:11:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1058,
+              "id": 1071,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1057,
+                  "id": 1070,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "1475:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1068,
+                  "scope": 1081,
                   "src": "1467:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9440,7 +9440,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1056,
+                    "id": 1069,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1467:7:3",
@@ -9456,17 +9456,17 @@
               "src": "1466:14:3"
             },
             "returnParameters": {
-              "id": 1061,
+              "id": 1074,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1060,
+                  "id": 1073,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1068,
+                  "scope": 1081,
                   "src": "1502:13:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9475,7 +9475,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1059,
+                    "id": 1072,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1502:6:3",
@@ -9489,7 +9489,7 @@
               ],
               "src": "1501:15:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1446:115:3",
             "stateMutability": "view",
             "virtual": false,
@@ -9497,32 +9497,32 @@
           },
           {
             "body": {
-              "id": 1076,
+              "id": 1089,
               "nodeType": "Block",
               "src": "1629:37:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 1074,
+                    "id": 1087,
                     "name": "directorsName",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 961,
+                    "referencedDeclaration": 974,
                     "src": "1646:13:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
                       "typeString": "string storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 1073,
-                  "id": 1075,
+                  "functionReturnParameters": 1086,
+                  "id": 1088,
                   "nodeType": "Return",
                   "src": "1639:20:3"
                 }
               ]
             },
             "functionSelector": "fd2641a4",
-            "id": 1077,
+            "id": 1090,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9530,23 +9530,23 @@
             "nameLocation": "1576:12:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1069,
+              "id": 1082,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1588:2:3"
             },
             "returnParameters": {
-              "id": 1073,
+              "id": 1086,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1072,
+                  "id": 1085,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1077,
+                  "scope": 1090,
                   "src": "1612:15:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9556,7 +9556,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1070,
+                      "id": 1083,
                       "name": "string",
                       "nodeType": "ElementaryTypeName",
                       "src": "1612:6:3",
@@ -9565,7 +9565,7 @@
                         "typeString": "string"
                       }
                     },
-                    "id": 1071,
+                    "id": 1084,
                     "nodeType": "ArrayTypeName",
                     "src": "1612:8:3",
                     "typeDescriptions": {
@@ -9578,7 +9578,7 @@
               ],
               "src": "1611:17:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1567:99:3",
             "stateMutability": "view",
             "virtual": false,
@@ -9586,74 +9586,74 @@
           },
           {
             "body": {
-              "id": 1103,
+              "id": 1116,
               "nodeType": "Block",
               "src": "1736:124:3",
               "statements": [
                 {
                   "assignments": [
-                    1086
+                    1099
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1086,
+                      "id": 1099,
                       "mutability": "mutable",
                       "name": "addedDir",
                       "nameLocation": "1763:8:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1103,
+                      "scope": 1116,
                       "src": "1746:25:3",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_director_$945_storage_ptr",
+                        "typeIdentifier": "t_struct$_director_$958_storage_ptr",
                         "typeString": "struct Datastore.director"
                       },
                       "typeName": {
-                        "id": 1085,
+                        "id": 1098,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 1084,
+                          "id": 1097,
                           "name": "director",
                           "nameLocations": [
                             "1746:8:3"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 945,
+                          "referencedDeclaration": 958,
                           "src": "1746:8:3"
                         },
-                        "referencedDeclaration": 945,
+                        "referencedDeclaration": 958,
                         "src": "1746:8:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_director_$945_storage_ptr",
+                          "typeIdentifier": "t_struct$_director_$958_storage_ptr",
                           "typeString": "struct Datastore.director"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1090,
+                  "id": 1103,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 1087,
+                      "id": 1100,
                       "name": "directors",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 955,
+                      "referencedDeclaration": 968,
                       "src": "1774:9:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
                         "typeString": "mapping(address => struct Datastore.director storage ref)"
                       }
                     },
-                    "id": 1089,
+                    "id": 1102,
                     "indexExpression": {
-                      "id": 1088,
+                      "id": 1101,
                       "name": "addr",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1079,
+                      "referencedDeclaration": 1092,
                       "src": "1784:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -9667,7 +9667,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1774:15:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_director_$945_storage",
+                      "typeIdentifier": "t_struct$_director_$958_storage",
                       "typeString": "struct Datastore.director storage ref"
                     }
                   },
@@ -9676,25 +9676,25 @@
                 },
                 {
                   "expression": {
-                    "id": 1095,
+                    "id": 1108,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 1091,
+                        "id": 1104,
                         "name": "addedDir",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1086,
+                        "referencedDeclaration": 1099,
                         "src": "1799:8:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_director_$945_storage_ptr",
+                          "typeIdentifier": "t_struct$_director_$958_storage_ptr",
                           "typeString": "struct Datastore.director storage pointer"
                         }
                       },
-                      "id": 1093,
+                      "id": 1106,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -9702,7 +9702,7 @@
                       "memberLocation": "1808:4:3",
                       "memberName": "name",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 940,
+                      "referencedDeclaration": 953,
                       "src": "1799:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -9712,11 +9712,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1094,
+                      "id": 1107,
                       "name": "name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1081,
+                      "referencedDeclaration": 1094,
                       "src": "1815:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -9729,7 +9729,7 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1096,
+                  "id": 1109,
                   "nodeType": "ExpressionStatement",
                   "src": "1799:20:3"
                 },
@@ -9737,11 +9737,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1100,
+                        "id": 1113,
                         "name": "name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1081,
+                        "referencedDeclaration": 1094,
                         "src": "1848:4:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_calldata_ptr",
@@ -9757,18 +9757,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 1097,
+                        "id": 1110,
                         "name": "directorsName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 961,
+                        "referencedDeclaration": 974,
                         "src": "1829:13:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
                           "typeString": "string storage ref[] storage ref"
                         }
                       },
-                      "id": 1099,
+                      "id": 1112,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -9782,7 +9782,7 @@
                         "typeString": "function (string storage ref[] storage pointer,string storage ref)"
                       }
                     },
-                    "id": 1101,
+                    "id": 1114,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9798,14 +9798,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1102,
+                  "id": 1115,
                   "nodeType": "ExpressionStatement",
                   "src": "1829:24:3"
                 }
               ]
             },
             "functionSelector": "49c6b28c",
-            "id": 1104,
+            "id": 1117,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9813,17 +9813,17 @@
             "nameLocation": "1681:11:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1082,
+              "id": 1095,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1079,
+                  "id": 1092,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "1701:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1104,
+                  "scope": 1117,
                   "src": "1693:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9832,7 +9832,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1078,
+                    "id": 1091,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1693:7:3",
@@ -9846,12 +9846,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1081,
+                  "id": 1094,
                   "mutability": "mutable",
                   "name": "name",
                   "nameLocation": "1723:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1104,
+                  "scope": 1117,
                   "src": "1707:20:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -9860,7 +9860,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1080,
+                    "id": 1093,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1707:6:3",
@@ -9875,12 +9875,12 @@
               "src": "1692:36:3"
             },
             "returnParameters": {
-              "id": 1083,
+              "id": 1096,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1736:0:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1672:188:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -9888,7 +9888,7 @@
           },
           {
             "body": {
-              "id": 1120,
+              "id": 1133,
               "nodeType": "Block",
               "src": "1966:63:3",
               "statements": [
@@ -9897,24 +9897,24 @@
                     "baseExpression": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1113,
+                          "id": 1126,
                           "name": "directors",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 955,
+                          "referencedDeclaration": 968,
                           "src": "1983:9:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
                             "typeString": "mapping(address => struct Datastore.director storage ref)"
                           }
                         },
-                        "id": 1115,
+                        "id": 1128,
                         "indexExpression": {
-                          "id": 1114,
+                          "id": 1127,
                           "name": "addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1106,
+                          "referencedDeclaration": 1119,
                           "src": "1993:4:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -9928,11 +9928,11 @@
                         "nodeType": "IndexAccess",
                         "src": "1983:15:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_director_$945_storage",
+                          "typeIdentifier": "t_struct$_director_$958_storage",
                           "typeString": "struct Datastore.director storage ref"
                         }
                       },
-                      "id": 1116,
+                      "id": 1129,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -9940,20 +9940,20 @@
                       "memberLocation": "1999:9:3",
                       "memberName": "proposals",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 944,
+                      "referencedDeclaration": 957,
                       "src": "1983:25:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
                         "typeString": "mapping(string memory => bool)"
                       }
                     },
-                    "id": 1118,
+                    "id": 1131,
                     "indexExpression": {
-                      "id": 1117,
+                      "id": 1130,
                       "name": "proposalName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1108,
+                      "referencedDeclaration": 1121,
                       "src": "2009:12:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -9971,15 +9971,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1112,
-                  "id": 1119,
+                  "functionReturnParameters": 1125,
+                  "id": 1132,
                   "nodeType": "Return",
                   "src": "1976:46:3"
                 }
               ]
             },
             "functionSelector": "39324c5b",
-            "id": 1121,
+            "id": 1134,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9987,17 +9987,17 @@
             "nameLocation": "1875:19:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1109,
+              "id": 1122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1106,
+                  "id": 1119,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "1903:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1121,
+                  "scope": 1134,
                   "src": "1895:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10006,7 +10006,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1105,
+                    "id": 1118,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1895:7:3",
@@ -10020,12 +10020,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1108,
+                  "id": 1121,
                   "mutability": "mutable",
                   "name": "proposalName",
                   "nameLocation": "1925:12:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1121,
+                  "scope": 1134,
                   "src": "1909:28:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -10034,7 +10034,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1107,
+                    "id": 1120,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1909:6:3",
@@ -10049,17 +10049,17 @@
               "src": "1894:44:3"
             },
             "returnParameters": {
-              "id": 1112,
+              "id": 1125,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1111,
+                  "id": 1124,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1121,
+                  "scope": 1134,
                   "src": "1960:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10068,7 +10068,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1110,
+                    "id": 1123,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1960:4:3",
@@ -10082,7 +10082,7 @@
               ],
               "src": "1959:6:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "1866:163:3",
             "stateMutability": "view",
             "virtual": false,
@@ -10090,13 +10090,13 @@
           },
           {
             "body": {
-              "id": 1137,
+              "id": 1150,
               "nodeType": "Block",
               "src": "2115:63:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 1135,
+                    "id": 1148,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10105,24 +10105,24 @@
                       "baseExpression": {
                         "expression": {
                           "baseExpression": {
-                            "id": 1128,
+                            "id": 1141,
                             "name": "directors",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 955,
+                            "referencedDeclaration": 968,
                             "src": "2125:9:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$945_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_director_$958_storage_$",
                               "typeString": "mapping(address => struct Datastore.director storage ref)"
                             }
                           },
-                          "id": 1130,
+                          "id": 1143,
                           "indexExpression": {
-                            "id": 1129,
+                            "id": 1142,
                             "name": "addr",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1123,
+                            "referencedDeclaration": 1136,
                             "src": "2135:4:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -10136,11 +10136,11 @@
                           "nodeType": "IndexAccess",
                           "src": "2125:15:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_director_$945_storage",
+                            "typeIdentifier": "t_struct$_director_$958_storage",
                             "typeString": "struct Datastore.director storage ref"
                           }
                         },
-                        "id": 1131,
+                        "id": 1144,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
@@ -10148,20 +10148,20 @@
                         "memberLocation": "2141:9:3",
                         "memberName": "proposals",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 944,
+                        "referencedDeclaration": 957,
                         "src": "2125:25:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
                           "typeString": "mapping(string memory => bool)"
                         }
                       },
-                      "id": 1133,
+                      "id": 1146,
                       "indexExpression": {
-                        "id": 1132,
+                        "id": 1145,
                         "name": "proposalName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1125,
+                        "referencedDeclaration": 1138,
                         "src": "2151:12:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_calldata_ptr",
@@ -10183,7 +10183,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "74727565",
-                      "id": 1134,
+                      "id": 1147,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -10203,14 +10203,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1136,
+                  "id": 1149,
                   "nodeType": "ExpressionStatement",
                   "src": "2125:46:3"
                 }
               ]
             },
             "functionSelector": "1546d17a",
-            "id": 1138,
+            "id": 1151,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -10218,17 +10218,17 @@
             "nameLocation": "2044:19:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1126,
+              "id": 1139,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1123,
+                  "id": 1136,
                   "mutability": "mutable",
                   "name": "addr",
                   "nameLocation": "2072:4:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1138,
+                  "scope": 1151,
                   "src": "2064:12:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10237,7 +10237,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1122,
+                    "id": 1135,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2064:7:3",
@@ -10251,12 +10251,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1125,
+                  "id": 1138,
                   "mutability": "mutable",
                   "name": "proposalName",
                   "nameLocation": "2094:12:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1138,
+                  "scope": 1151,
                   "src": "2078:28:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -10265,7 +10265,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1124,
+                    "id": 1137,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2078:6:3",
@@ -10280,19 +10280,19 @@
               "src": "2063:44:3"
             },
             "returnParameters": {
-              "id": 1127,
+              "id": 1140,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2115:0:3"
             },
-            "scope": 1139,
+            "scope": 1152,
             "src": "2035:143:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1140,
+        "scope": 1153,
         "src": "25:2155:3",
         "usedErrors": []
       }
@@ -10307,12 +10307,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x48A8cA6C6da3a9e6F63bb04F1D1bd442715301E1",
-      "transactionHash": "0xebe1714a11d5a56bdfd024d9efb46ce1fc05884d3c791a5fc5d8b91032b8e9ea"
+      "address": "0x1c5D88b61E2D36f5eb4A12b357daF1941397E199",
+      "transactionHash": "0x27cb570a88821bd47922b5417d8dceabda9e4f65493888be5eea2cd90119c3af"
     }
   },
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-11-05T16:29:04.445Z",
+  "updatedAt": "2022-11-07T15:48:39.150Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

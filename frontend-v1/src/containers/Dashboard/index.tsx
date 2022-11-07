@@ -24,7 +24,6 @@ const Dashboard = () => {
     try {
       let tempArray = [];
       const data = await contract.getAllProposals();
-      console.log(data);
       for (const proposal of data) {
         const proposalData = await contract.getProposalInfo(proposal);
         tempArray.push({
@@ -46,16 +45,19 @@ const Dashboard = () => {
         {allProposalDetails.map((proposal: any) => {
           return Object.entries(proposal).map(([key, value]: [string, any]) => {
             return (
-              <Col span={8}>
-                <ItemCard
-                  key={key}
-                  title={key}
-                  budget={value.budget["_hex"]}
-                  voteYes={value.voteYes["_hex"]}
-                  voteNo={value.voteNo["_hex"]}
-                  votingEndTime={value.votingEndTime["_hex"]}
-                />
-              </Col>
+              key && (
+                <Col span={8}>
+                  <ItemCard
+                    key={key}
+                    title={key}
+                    budget={value.budget["_hex"]}
+                    voteYes={value.voteYes["_hex"]}
+                    voteNo={value.voteNo["_hex"]}
+                    votingEndTime={value.votingEndTime["_hex"]}
+                    seeProposal={seeProposals}
+                  />
+                </Col>
+              )
             );
           });
         })}

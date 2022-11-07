@@ -17,24 +17,28 @@ import {
 } from "./styles";
 import ProposalModal from "@/components/ProposalModal";
 import ItemCard from "@/components/ItemCard";
-import { Row, Col } from "antd";
+import { Row, Col, message } from "antd";
 import {
   datastoreAddress,
   proposalAddress,
   directorAddress,
+  mainAddress,
+  mainKey,
 } from "@/utils/constants/blockchainAddresses";
 import { ExceptionOutlined } from "@ant-design/icons";
+import { TitleText } from "@/components/ItemCard/styles";
 
 const Admin = () => {
   const [hasSetDirector, setHasSetDirector] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [directorName, setDirectorName] = useState<string>("");
   const [allProposalDetails, setAllProposalDetails] = useState<any>([]);
-  const [winningProposals, setWinningProposals] = useState<any>();
+  const [winningProposals, setWinningProposals] = useState<any>([]);
 
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
     seeProposals();
+    getWinningProposals();
   }, []);
 
   useEffect(() => {
@@ -84,6 +88,8 @@ const Admin = () => {
       console.log(error);
     }
   };
+
+  console.log(winningProposals);
 
   const addProposal = async (
     proposalName: string,
@@ -153,40 +159,39 @@ const Admin = () => {
       provider
     );
     try {
-      console.log(contract)
+      const tempArray = [];
       const transaction = await contract.getAllWinningProposals();
-      console.log(transaction)
-      setWinningProposals(transaction);
+      for (const proposal of transaction) {
+        const proposalData = await contract.getWinningProposalInfo(proposal);
+        tempArray.push({
+          [proposal]: proposalData,
+        });
+      }
+      setWinningProposals(tempArray);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    getWinningProposals();
-  }, []);
-
-  useEffect(() => {
-    console.log("win");
-    console.log(winningProposals);
-  }, [winningProposals]);
-
   const sendMoney = async () => {
     if (typeof window.ethereum != "undefined") {
       const createTransaction = await web3.eth.accounts.signTransaction(
         {
-          from: "0xa5F0f4478077D873f1c9B96A1dcd42c0f13F8519",
-          to: "0x678B618a49C9F94E63E4B825b320c6BD5C4c7955",
-          value: web3.utils.toWei("10", "ether"),
+          from: mainAddress,
+          to: directorAddress,
+          value: web3.utils.toWei("1", "ether"),
           gas: "21000",
         },
-        "ce518da9e2a91a8908af82789077477efd58e6cfe0a3ff3cb904f23bf8199a62"
+        mainKey
       );
+      console.log(createTransaction);
       try {
         await web3.eth.sendSignedTransaction(
           createTransaction.rawTransaction as string
         );
+        message.success("Transaction successful");
       } catch (error) {
+        console.error(error);
         console.log("not enough money");
       }
     }
@@ -226,16 +231,50 @@ const Admin = () => {
                 return Object.entries(proposal).map(
                   ([key, value]: [string, any]) => {
                     return (
-                      <Col span={8}>
-                        <ItemCard
-                          key={key}
-                          title={key}
-                          budget={value.budget["_hex"]}
-                          voteYes={value.voteYes["_hex"]}
-                          voteNo={value.voteNo["_hex"]}
-                          votingEndTime={value.votingEndTime["_hex"]}
-                        />
-                      </Col>
+                      key && (
+                        <Col span={8}>
+                          <ItemCard
+                            key={key}
+                            title={key}
+                            budget={value.budget["_hex"]}
+                            voteYes={value.voteYes["_hex"]}
+                            voteNo={value.voteNo["_hex"]}
+                            votingEndTime={value.votingEndTime["_hex"]}
+                            seeProposal={seeProposals}
+                          />
+                        </Col>
+                      )
+                    );
+                  }
+                );
+              })}
+            </Row>
+          </CardContainer>
+          {winningProposals.length > 0 && (
+            <TitleText>Winning Proposals</TitleText>
+          )}
+
+          <CardContainer>
+            <Row gutter={[24, 24]} style={{ paddingBottom: "3rem" }}>
+              {winningProposals.map((proposal: any) => {
+                return Object.entries(proposal).map(
+                  ([key, value]: [string, any]) => {
+                    return (
+                      key && (
+                        <Col span={8}>
+                          <ItemCard
+                            key={key}
+                            title={key}
+                            budget={value.budget["_hex"]}
+                            voteYes={value.voteYes["_hex"]}
+                            voteNo={value.voteNo["_hex"]}
+                            votingEndTime={value.votingEndTime["_hex"]}
+                            seeProposal={seeProposals}
+                            isWinning
+                            sendMoney={sendMoney}
+                          />
+                        </Col>
+                      )
                     );
                   }
                 );

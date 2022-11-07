@@ -2,6 +2,7 @@ import React from "react";
 import {
   BudgetText,
   DescriptionContainer,
+  EndProposalText,
   FlexContainer,
   StyledCard,
   TitleText,
@@ -21,6 +22,9 @@ type ItemCardProps = {
   voteYes: string;
   voteNo: string;
   votingEndTime: string;
+  seeProposal: () => void;
+  isWinning?: boolean;
+  sendMoney?: () => void;
 };
 
 const ItemCard = ({
@@ -29,6 +33,9 @@ const ItemCard = ({
   voteYes,
   voteNo,
   votingEndTime,
+  seeProposal,
+  isWinning,
+  sendMoney,
 }: ItemCardProps) => {
   const pollQuestion = `Vote for ${title}`;
   const pollAnswers = [
@@ -57,12 +64,18 @@ const ItemCard = ({
 
   const handleVote = async (voteAnswers: any) => {
     voteProposal(title, voteAnswers);
+    seeProposal();
   };
 
   return (
     <StyledCard bordered={false}>
       <FlexContainer>
         <TitleText>{title}</TitleText>
+        {isWinning && (
+          <EndProposalText onClick={sendMoney}>
+            <DollarCircleOutlined /> Send Money
+          </EndProposalText>
+        )}
       </FlexContainer>
       <FlexContainer>
         <BudgetText>
@@ -76,14 +89,16 @@ const ItemCard = ({
       <DescriptionContainer>
         Some description about the project...
       </DescriptionContainer>
-      <VotingContainer>
-        <Poll
-          key={`${title}_${votingEndTime}`}
-          question={pollQuestion}
-          answers={pollAnswers}
-          onVote={handleVote}
-        />
-      </VotingContainer>
+      {!isWinning && (
+        <VotingContainer>
+          <Poll
+            key={`${title}_${votingEndTime}`}
+            question={pollQuestion}
+            answers={pollAnswers}
+            onVote={handleVote}
+          />
+        </VotingContainer>
+      )}
     </StyledCard>
   );
 };
