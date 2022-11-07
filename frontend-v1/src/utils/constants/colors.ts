@@ -9,4 +9,5 @@ export default {
   ORANGE_8: "#FFB262",
   BLACK: "#000000",
   WHITE: "#FFFFFF",
+  GREY: "#999999",
 };

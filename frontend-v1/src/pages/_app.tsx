@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import { Container } from "@/utils/styles";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,8 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Town Budgeting App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
+      <Container>
+        <Navbar />
+        <Component {...pageProps} />
+      </Container>
     </>
   );
 }
