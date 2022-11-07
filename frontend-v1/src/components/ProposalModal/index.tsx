@@ -9,12 +9,14 @@ type ProposalModalProps = {
   isModalOpen: boolean;
   setIsModalOpen: (isModalOpen: boolean) => void;
   addProposal: Function;
+  seeProposal: () => void;
 };
 
 const ProposalModal = ({
   isModalOpen,
   setIsModalOpen,
   addProposal,
+  seeProposal,
 }: ProposalModalProps) => {
   const [date, setDate] = useState<number>();
 
@@ -32,11 +34,12 @@ const ProposalModal = ({
       parseFloat(budget.slice(2).replace(/,/g, "")),
       Number(date)
     );
-
+    seeProposal();
     message.success({
       content: "Proposal submitted successfully!",
       duration: 2,
     });
+
     reset();
   };
 
@@ -44,7 +47,6 @@ const ProposalModal = ({
     <Modal
       title="Add a Proposal"
       centered
-      // width={800}
       open={isModalOpen}
       okText="Submit"
       onOk={handleSubmit(onSubmit)}

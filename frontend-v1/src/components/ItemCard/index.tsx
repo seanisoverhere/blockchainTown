@@ -8,12 +8,7 @@ import {
   VotingContainer,
 } from "./styles";
 import moment from "moment";
-import {
-  DollarCircleOutlined,
-  CalendarOutlined,
-  ExceptionOutlined,
-} from "@ant-design/icons";
-import { useRouter } from "next/router";
+import { DollarCircleOutlined, CalendarOutlined } from "@ant-design/icons";
 import { ethers } from "ethers";
 import ProposalContract from "@/contracts/ProposalContract.json";
 // @ts-ignore
@@ -35,8 +30,6 @@ const ItemCard = ({
   voteNo,
   votingEndTime,
 }: ItemCardProps) => {
-  const router = useRouter();
-
   const pollQuestion = `Vote for ${title}`;
   const pollAnswers = [
     { option: "Yes", votes: parseInt(voteYes) },
@@ -63,23 +56,7 @@ const ItemCard = ({
   };
 
   const handleVote = async (voteAnswers: any) => {
-    // await addVoter();
     voteProposal(title, voteAnswers);
-  };
-
-  const handleEndProposal = async () => {
-    if (typeof window.ethereum != "undefined") {
-      await requestAccount();
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        proposalAddress,
-        ProposalContract.abi,
-        signer
-      );
-      const transaction = await contract.removeEndedProposals2();
-      await transaction.wait();
-    }
   };
 
   return (
@@ -101,11 +78,10 @@ const ItemCard = ({
       </DescriptionContainer>
       <VotingContainer>
         <Poll
-          id={`${title}_${votingEndTime}`}
+          key={`${title}_${votingEndTime}`}
           question={pollQuestion}
           answers={pollAnswers}
           onVote={handleVote}
-          vote
         />
       </VotingContainer>
     </StyledCard>

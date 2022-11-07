@@ -30,6 +30,7 @@ const Admin = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [directorName, setDirectorName] = useState<string>("");
   const [allProposalDetails, setAllProposalDetails] = useState<any>([]);
+  const [winningProposals, setWinningProposals] = useState<any>();
 
   useEffect(() => {
     setHasSetDirector(!!localStorage.getItem("address"));
@@ -41,10 +42,6 @@ const Admin = () => {
       getDirector();
     }
   }, [hasSetDirector]);
-
-  useEffect(() => {
-    console.log(allProposalDetails);
-  }, [allProposalDetails]);
 
   const web3 = new Web3(typeof window !== "undefined" && window.ethereum);
 
@@ -148,6 +145,32 @@ const Admin = () => {
     }
   };
 
+  const getWinningProposals = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const contract = new ethers.Contract(
+      proposalAddress,
+      ProposalContract.abi,
+      provider
+    );
+    try {
+      console.log(contract)
+      const transaction = await contract.getAllWinningProposals();
+      console.log(transaction)
+      setWinningProposals(transaction);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getWinningProposals();
+  }, []);
+
+  useEffect(() => {
+    console.log("win");
+    console.log(winningProposals);
+  }, [winningProposals]);
+
   const sendMoney = async () => {
     if (typeof window.ethereum != "undefined") {
       const createTransaction = await web3.eth.accounts.signTransaction(
@@ -175,6 +198,7 @@ const Admin = () => {
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
         addProposal={addProposal}
+        seeProposal={seeProposals}
       />
       <FlexContainer>
         <Title>Directors' Proposal Console</Title>
@@ -201,7 +225,6 @@ const Admin = () => {
               {allProposalDetails.map((proposal: any) => {
                 return Object.entries(proposal).map(
                   ([key, value]: [string, any]) => {
-                    console.log(value);
                     return (
                       <Col span={8}>
                         <ItemCard
