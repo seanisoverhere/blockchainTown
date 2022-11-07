@@ -10,6 +10,7 @@ const Dashboard = () => {
   const [allProposalDetails, setAllProposalDetails] = useState<any>([]);
 
   const proposalAddress = "0xe8b00d59B0E371d3d1b71D1306FACbA45862784b";
+  const voterAddress = "0xcb65A614A8c30410e6E6c72DCD6B845AeAB35df0";
 
   useEffect(() => {
     seeProposals();

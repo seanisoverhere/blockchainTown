@@ -63,3 +63,9 @@ export const StyledButton = styled.button`
 export const CardContainer = styled.div`
   margin: 1rem 0;
 `;
+
+export const EndProposalText = styled.div`
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+`;

@@ -7,6 +7,10 @@ export const StyledCard = styled(Card)`
     border-radius: 25px;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    .ant-card-body {
+      padding-bottom: 8px;
+    }
   }
 `;
 
@@ -45,16 +49,6 @@ export const BudgetText = styled.div`
   font-size: 1rem;
 `;
 
-export const EndProposalText = styled.div`
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.2s;
-
-  :hover {
-    color: ${colors.ORANGE_8};
-  }
-`;
-
 export const VoterText = styled.div`
   font-weight: 600;
   font-size: 1.2rem;
@@ -71,5 +65,8 @@ export const Voter = styled.span`
 `;
 
 export const VotingContainer = styled.div`
+  margin-top: 1rem;
+`;
+export const DescriptionContainer = styled.div`
   margin-top: 1rem;
 `;

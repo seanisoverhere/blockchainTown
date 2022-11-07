@@ -13,10 +13,17 @@ import {
   StyledButton,
   StyledImg,
   Title,
+  EndProposalText,
 } from "./styles";
 import ProposalModal from "@/components/ProposalModal";
 import ItemCard from "@/components/ItemCard";
 import { Row, Col } from "antd";
+import {
+  datastoreAddress,
+  proposalAddress,
+  directorAddress,
+} from "@/utils/constants/blockchainAddresses";
+import { ExceptionOutlined } from "@ant-design/icons";
 
 const Admin = () => {
   const [hasSetDirector, setHasSetDirector] = useState<boolean>(false);
@@ -39,10 +46,6 @@ const Admin = () => {
     console.log(allProposalDetails);
   }, [allProposalDetails]);
 
-  const datastoreAddress = "0x45e81400E70e7b78834120230fD44972c8A41334";
-  const proposalAddress = "0xe8b00d59B0E371d3d1b71D1306FACbA45862784b";
-  const metamaskAddress = "0xFD39D27e180DeE1E6f7FD851ED303C50f1ADFF35";
-
   const web3 = new Web3(typeof window !== "undefined" && window.ethereum);
 
   const requestAccount = async () => {
@@ -61,10 +64,10 @@ const Admin = () => {
       );
       // contract.<method in solidty>
       const transaction = await contract.addDirector(
-        metamaskAddress,
+        directorAddress,
         "Keith Long"
       );
-      localStorage.setItem("address", metamaskAddress);
+      localStorage.setItem("address", directorAddress);
       setHasSetDirector(true);
       await transaction.wait();
     }
@@ -79,7 +82,6 @@ const Admin = () => {
     );
     try {
       const name = await contract.getDirector(localStorage.getItem("address"));
-      console.log(name);
       setDirectorName(name);
     } catch (error) {
       console.log(error);
@@ -131,6 +133,21 @@ const Admin = () => {
     }
   };
 
+  const handleEndProposal = async () => {
+    if (typeof window.ethereum != "undefined") {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        proposalAddress,
+        ProposalContract.abi,
+        signer
+      );
+      const transaction = await contract.removeEndedProposals2();
+      await transaction.wait();
+    }
+  };
+
   const sendMoney = async () => {
     if (typeof window.ethereum != "undefined") {
       const createTransaction = await web3.eth.accounts.signTransaction(
@@ -169,13 +186,22 @@ const Admin = () => {
       </FlexContainer>
       {hasSetDirector ? (
         <>
-          <DirectorName>Welcome, {directorName}</DirectorName>
+          <FlexContainer>
+            <DirectorName>Welcome, {directorName}</DirectorName>
+            <>
+              {allProposalDetails.length > 0 && (
+                <EndProposalText onClick={() => handleEndProposal()}>
+                  <ExceptionOutlined /> End Proposals
+                </EndProposalText>
+              )}
+            </>
+          </FlexContainer>
           <CardContainer>
             <Row gutter={[24, 24]} style={{ paddingBottom: "3rem" }}>
               {allProposalDetails.map((proposal: any) => {
                 return Object.entries(proposal).map(
                   ([key, value]: [string, any]) => {
-                    console.log(value)
+                    console.log(value);
                     return (
                       <Col span={8}>
                         <ItemCard
