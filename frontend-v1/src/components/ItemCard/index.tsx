@@ -62,6 +62,8 @@ const ItemCard = ({
     }
   };
 
+  console.log(parseInt(votingEndTime));
+
   const handleVote = async (voteAnswers: any) => {
     voteProposal(title, voteAnswers);
     seeProposal();
@@ -83,7 +85,7 @@ const ItemCard = ({
         </BudgetText>
         <BudgetText>
           <CalendarOutlined />{" "}
-          {moment.unix(parseInt(votingEndTime)).format("MMMM Do, yy")}
+          {moment(parseInt(votingEndTime)).format("MMMM Do, yy")}
         </BudgetText>
       </FlexContainer>
       <DescriptionContainer>

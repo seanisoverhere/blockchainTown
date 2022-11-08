@@ -89,8 +89,6 @@ const Admin = () => {
     }
   };
 
-  console.log(winningProposals);
-
   const addProposal = async (
     proposalName: string,
     budget: Number,
@@ -184,7 +182,6 @@ const Admin = () => {
         },
         mainKey
       );
-      console.log(createTransaction);
       try {
         await web3.eth.sendSignedTransaction(
           createTransaction.rawTransaction as string
